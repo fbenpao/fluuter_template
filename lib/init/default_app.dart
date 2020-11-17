@@ -1,15 +1,18 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_template/core/http/http.dart';
 import 'package:flutter_template/core/utils/toast.dart';
+import 'package:flutter_template/core/webviewplugin/webviewplugin.dart';
 import 'package:flutter_template/generated/i18n.dart';
 import 'package:flutter_template/router/route_map.dart';
 import 'package:flutter_template/router/route_map.gr.dart';
 import 'package:flutter_template/router/router.dart';
 import 'package:flutter_template/utils/provider.dart';
 import 'package:flutter_template/utils/sputils.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:provider/provider.dart';
 
 //默认App的启动
@@ -25,6 +28,7 @@ class DefaultApp {
   static void initApp() {
     XHttp.init();
     XRouter.init();
+    XWebViewPlugin.init();
   }
 }
 

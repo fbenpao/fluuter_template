@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_template/core/utils/toast.dart';
 import 'package:flutter_template/core/widget/grid/grid_item.dart';
 import 'package:flutter_template/core/widget/list/article_item.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class TabHomePage extends StatefulWidget {
   @override
@@ -56,6 +58,13 @@ class _TabHomePageState extends State<TabHomePage> {
                       title: action.title,
                       color: action.color,
                       onTap: () {
+                        print("进入 CallJS");
+                        print("打印助记词");
+                        //FlutterWebviewPlugin是一个单例
+                        final flutterWebViewPlugin = FlutterWebviewPlugin();
+                        flutterWebViewPlugin.evalJavascript("wallet.getMnemonic()").then((value) =>{
+                          print("$value"),
+                        });
                         ToastUtils.toast('点击-->${action.title}');
                       });
                 },

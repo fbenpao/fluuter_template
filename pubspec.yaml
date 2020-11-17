@@ -22,7 +22,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  auto_route: ^0.5.0
+  auto_route: 0.5.0
   cached_network_image: ^2.2.0+1
   cookie_jar: ^1.0.1
   cupertino_icons: ^0.1.2
@@ -32,7 +32,7 @@ dependencies:
   extended_image: ^0.7.3+1
   event_bus: ^1.1.1
   fluro: ^1.6.3
-  flutter_easyrefresh: ^2.1.1
+  flutter_easyrefresh: 2.1.1
   flutter_spinkit: ^4.1.2+1
   flutter_swiper: ^1.1.6
   flutter_webview_plugin: ^0.3.11
@@ -51,7 +51,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  auto_route_generator: ^0.5.0
+  auto_route_generator: 0.5.0
 
 flutter:
 
@@ -59,6 +59,7 @@ flutter:
 
   assets:
   - assets/
+  - assets/js/main.js
 
   fonts:
     - family: xuifont  #指定一个字体名
